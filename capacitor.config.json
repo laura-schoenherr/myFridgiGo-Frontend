@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "myFridgiGo",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

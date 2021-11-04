@@ -233,4 +233,11 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-card-background: #1e1e1e;
   }
+
+  ion-input {
+    --background: #ffcce6;
+    --placeholder-color: #999999;
+  }
+
+
 }

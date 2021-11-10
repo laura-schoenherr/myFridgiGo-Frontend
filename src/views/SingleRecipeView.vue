@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Filter</ion-title>
+        <ion-title>Rezeptansicht</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">

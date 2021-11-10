@@ -33,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'tab3/filter',
-        component: () => import('@/views/Filter.vue')
+        component: () => import('@/views/SingleRecipeView.vue')
       },
       {
         path: 'tab4',

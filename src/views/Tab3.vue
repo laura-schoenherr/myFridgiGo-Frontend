@@ -27,162 +27,143 @@
       <!--Beginning of the grid for the recipe display-->
       <ion-grid>
         <ion-row>
-          <ion-col>
+         <ion-col>
+
             <ion-card>
+              <ion-card-content class="ion-no-padding">
+                <img
+                    alt="Kuchenstücke am Stiel mit Schokoglasur auf Blech"
+                    src="../img/Cakesticks.png" />
+
+                <ion-fab vertical="top" horizontal="end" slot="fixed" >
+                  <ion-fab-button router-link="tab3/SingleRecipeView" color="medium">
+                    <ion-icon :icon="add"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
+              </ion-card-content>
               <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                <ion-card-title>Card Title</ion-card-title>
+                <ion-card-title>Cake Sticks</ion-card-title>
+                <ion-card-subtitle>Schokokuchen am Stiel</ion-card-subtitle>
               </ion-card-header>
-
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
             </ion-card>
 
-            <ion-card>
-              <ion-item>
-                <ion-icon :icon="pin" slot="start"></ion-icon>
-                <ion-label>ion-item in a card, icon left, button right</ion-label>
-                <ion-button fill="outline" slot="end">View</ion-button>
-              </ion-item>
-
-              <ion-card-content>
-                This is content, without any paragraph or header tags,
-                within an ion-card-content element.
-              </ion-card-content>
-            </ion-card>
           </ion-col>
           <ion-col>
+
             <ion-card>
+              <ion-card-content class="ion-no-padding">
+                <img
+                    alt="Schupfnudeln mit Spinat"
+                    src="../img/Schupfnudeln.png"/>
+                <ion-fab vertical="top" horizontal="end" slot="fixed" >
+                  <ion-fab-button router-link="tab3/SingleRecipeView" color="medium">
+                    <ion-icon :icon="add"></ion-icon>
+                  </ion-fab-button>
+                </ion-fab>
+              </ion-card-content>
               <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                <ion-card-title>Card Title</ion-card-title>
+                <ion-card-title>Schupfnudeln mit Spinat</ion-card-title>
+               <ion-card-subtitle>15 Minuten Pfanne</ion-card-subtitle>
               </ion-card-header>
-
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
             </ion-card>
 
-            <ion-card>
-              <ion-item>
-                <ion-icon :icon="pin" slot="start"></ion-icon>
-                <ion-label>ion-item in a card, icon left, button right</ion-label>
-                <ion-button fill="outline" slot="end">View</ion-button>
-              </ion-item>
-
-              <ion-card-content>
-                This is content, without any paragraph or header tags,
-                within an ion-card-content element.
-              </ion-card-content>
-            </ion-card>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <ion-card>
+              <ion-card-content class="ion-no-padding">
+                Keep close to Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
               <ion-card-header>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
                 <ion-card-title>Card Title</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
             </ion-card>
 
             <ion-card>
-              <ion-item>
-                <ion-icon :icon="pin" slot="start"></ion-icon>
-                <ion-label>ion-item in a card, icon left, button right</ion-label>
-                <ion-button fill="outline" slot="end">View</ion-button>
-              </ion-item>
-
-              <ion-card-content>
+              <ion-card-content class="ion-no-padding">
                 This is content, without any paragraph or header tags,
                 within an ion-card-content element.
               </ion-card-content>
+              <ion-card-header>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+              </ion-card-header>
             </ion-card>
           </ion-col>
           <ion-col>
             <ion-card>
+              <ion-card-content class="ion-no-padding">
+                Keep close to Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
               <ion-card-header>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
                 <ion-card-title>Card Title</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
             </ion-card>
 
             <ion-card>
-              <ion-item>
-                <ion-icon :icon="pin" slot="start"></ion-icon>
-                <ion-label>ion-item in a card, icon left, button right</ion-label>
-                <ion-button fill="outline" slot="end">View</ion-button>
-              </ion-item>
-
-              <ion-card-content>
+              <ion-card-content class="ion-no-padding">
                 This is content, without any paragraph or header tags,
                 within an ion-card-content element.
               </ion-card-content>
+              <ion-card-header>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+              </ion-card-header>
             </ion-card>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
+
             <ion-card>
+              <ion-card-content class="ion-no-padding">
+                Keep close to Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
               <ion-card-header>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
                 <ion-card-title>Card Title</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
             </ion-card>
 
             <ion-card>
-              <ion-item>
-                <ion-icon :icon="pin" slot="start"></ion-icon>
-                <ion-label>ion-item in a card, icon left, button right</ion-label>
-                <ion-button fill="outline" slot="end">View</ion-button>
-              </ion-item>
-
-              <ion-card-content>
+              <ion-card-content class="ion-no-padding">
                 This is content, without any paragraph or header tags,
                 within an ion-card-content element.
               </ion-card-content>
+              <ion-card-header>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+              </ion-card-header>
             </ion-card>
           </ion-col>
+
           <ion-col>
             <ion-card>
+              <ion-card-content class="ion-no-padding">
+                Keep close to Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
               <ion-card-header>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
                 <ion-card-title>Card Title</ion-card-title>
               </ion-card-header>
+            </ion-card>
 
-              <ion-card-content>
-                Keep close to Nature's heart... and break clear away, once in awhile,
-                and climb a mountain or spend a week in the woods. Wash your spirit clean.
-              </ion-card-content>
-
-              <ion-item>
-                <ion-icon :icon="pin" slot="start"></ion-icon>
-                <ion-label>ion-item in a card, icon left, button right</ion-label>
-                <ion-button fill="outline" slot="end">View</ion-button>
-              </ion-item>
-
-              <ion-card-content>
+             <ion-card>
+              <ion-card-content class="ion-no-padding">
                 This is content, without any paragraph or header tags,
                 within an ion-card-content element.
               </ion-card-content>
+               <ion-card-header>
+                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                 <ion-card-title>Card Title</ion-card-title>
+               </ion-card-header>
             </ion-card>
           </ion-col>
         </ion-row>
@@ -198,18 +179,18 @@
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFabButton,
   IonIcon, IonFab, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle,
-  IonButton, IonGrid, IonCol, IonRow } from '@ionic/vue';
+  IonButton, IonGrid, IonCol, IonRow, IonLabel} from '@ionic/vue';
 import { defineComponent } from "vue";
 import { add } from "ionicons/icons";
 
 export default defineComponent({
   name: 'Tab3',
   components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonFabButton, IonIcon, IonFab,
-  IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonCol, IonRow },
+  IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonCol, IonRow, IonLabel, },
   setup() {
     return {
       add,
-    };
-  },
-})
+    }
+  }
+});
 </script>

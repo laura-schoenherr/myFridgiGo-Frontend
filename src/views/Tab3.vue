@@ -2,15 +2,11 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Rezepte</ion-title>
+        <ion-title size="large" class="ion-text-center">Rezepte</ion-title>
       </ion-toolbar>
-    </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Rezepte</ion-title>
-        </ion-toolbar>
       </ion-header>
+    <ion-content>
+
 
       <!--Filter button-->
       <ion-button fill="outline" color="medium" expand="block">
@@ -26,9 +22,8 @@
 
       <!--Beginning of the grid for the recipe display-->
       <ion-grid>
-        <ion-row>
-         <ion-col>
-
+        <ion-row> <!--first row-->
+         <ion-col size-sm="6">
             <ion-card>
               <ion-card-content class="ion-no-padding">
                 <img
@@ -48,7 +43,7 @@
             </ion-card>
 
           </ion-col>
-          <ion-col>
+          <ion-col size-sm="6">
 
             <ion-card>
               <ion-card-content class="ion-no-padding">
@@ -168,16 +163,12 @@
           </ion-col>
         </ion-row>
       </ion-grid>
-
-
-
-
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonFabButton,
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonFabButton, IonContent,
   IonIcon, IonFab, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle,
   IonButton, IonGrid, IonCol, IonRow, IonLabel} from '@ionic/vue';
 import { defineComponent } from "vue";
@@ -185,7 +176,7 @@ import { add } from "ionicons/icons";
 
 export default defineComponent({
   name: 'Tab3',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonFabButton, IonIcon, IonFab,
+  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonFabButton, IonContent, IonIcon, IonFab,
   IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonCol, IonRow, IonLabel, },
   setup() {
     return {
@@ -194,3 +185,9 @@ export default defineComponent({
   }
 });
 </script>
+
+<style scoped>
+.ion-text-center {
+  text-align: center;
+}
+</style>

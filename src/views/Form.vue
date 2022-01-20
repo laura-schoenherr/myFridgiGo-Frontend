@@ -90,7 +90,7 @@
   IonItem, IonLabel, IonList, IonButton, IonGrid, IonCol, IonRow, } from '@ionic/vue';
   import { defineComponent } from "vue";
   import { arrowBackOutline, } from "ionicons/icons";
-  import axios from "axios";
+ /* import axios from "axios"; */
 
 export default defineComponent({
   name: "Form",
@@ -102,13 +102,13 @@ export default defineComponent({
     };
   },
 
-  sendRecipeTitle() {
+  /* sendRecipeTitle() {
     axios
     .post("")
     .then(function (response) {
       console.log(response);
     })
-  }
+  } */
 })
 </script>
 

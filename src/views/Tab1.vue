@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList } from '@ionic/vue';
-import axios from "axios";
+/* import axios from "axios"; */
 import {defineComponent} from "vue";
 
 export default  defineComponent({
@@ -47,7 +47,7 @@ export default  defineComponent({
   data() {
     return { greeting: null as any };
   },
-  methods: {
+ /* methods: {
     loadGreeting(){
       axios
           .get("http://localhost:8080/greeting")
@@ -55,6 +55,6 @@ export default  defineComponent({
             this.greeting = response.data;
         })
       }
-    }
+    }*/
 })
 </script>

@@ -28,7 +28,7 @@ const app = createApp(App)
   .use(IonicVue)
   .use(router)
 
-    /* nach Bedarf*/
+    /* nach Bedarf */
     .use(vueKeycloak, '/keycloak.json')
 
 .use(vueKeycloak, async () => {

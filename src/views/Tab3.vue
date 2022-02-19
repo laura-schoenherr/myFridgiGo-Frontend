@@ -156,7 +156,7 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonFabButton, IonContent,
   IonIcon, IonFab, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle,
   IonButton, IonGrid, IonCol, IonRow, IonLabel} from '@ionic/vue';

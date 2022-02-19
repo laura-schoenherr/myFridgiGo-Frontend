@@ -40,7 +40,7 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton } from '@ionic/vue';
 /* import axios from "axios"; */
 import {defineComponent} from "vue";

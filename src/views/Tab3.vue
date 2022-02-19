@@ -14,7 +14,7 @@
       </ion-button>
 
       <!--"Add" button for recipe form-->
-      <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button router-link="tab3/form">
           <ion-icon :icon="add"></ion-icon>
         </ion-fab-button>
@@ -29,12 +29,6 @@
                 <img
                     alt="Kuchenstücke am Stiel mit Schokoglasur auf Blech"
                     src="../img/Cakesticks.png" />
-
-                <ion-fab vertical="top" horizontal="end" slot="fixed" >
-                  <ion-fab-button router-link="tab3/SingleRecipeView" color="medium">
-                    <ion-icon :icon="add"></ion-icon>
-                  </ion-fab-button>
-                </ion-fab>
               </ion-card-content>
               <ion-card-header>
                 <ion-card-title>Cake Sticks</ion-card-title>
@@ -50,11 +44,6 @@
                 <img
                     alt="Schupfnudeln mit Spinat"
                     src="../img/Schupfnudeln.png"/>
-                <ion-fab vertical="top" horizontal="end" slot="fixed" >
-                  <ion-fab-button router-link="tab3/SingleRecipeView" color="medium">
-                    <ion-icon :icon="add"></ion-icon>
-                  </ion-fab-button>
-                </ion-fab>
               </ion-card-content>
               <ion-card-header>
                 <ion-card-title>Schupfnudeln mit Spinat</ion-card-title>

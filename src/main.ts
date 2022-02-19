@@ -22,11 +22,31 @@ import '@ionic/vue/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import {vueKeycloak} from "@baloise/vue-keycloak";
+import i18n from './i18n'
 
-const app = createApp(App)
+const app = createApp(App).use(i18n)
   .use(IonicVue)
-  .use(router);
-  
+  .use(router)
+
+    /* nach Bedarf */
+    .use(vueKeycloak, '/keycloak.json')
+
+.use(vueKeycloak, async () => {
+  return {
+    config: {
+      url: ('http://localhost:8080/auth/'),
+      realm: 'FridigGo',
+      clientId: 'fridgigoclient',
+    },
+    initOptions: {
+      onLoad: 'check-sso',
+      silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html',
+    },
+  }
+})
+/*.config.globalProperties.$keycloak = keycloak;*/
+
 router.isReady().then(() => {
   app.mount('#app');
 });

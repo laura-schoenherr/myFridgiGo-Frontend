@@ -28,6 +28,11 @@
             <ion-label>{{item}} </ion-label>
           </ion-item>
         </ion-list>
+        <p>Hier kannst du dich ein- und ausloggen oder ein Konto einrichten</p>
+        <div v-if="!isAuthenticated"> <ion-button @click="login">Login or Sign up</ion-button> </div>
+        <div v-else><ion-button @click="logout">Logout</ion-button></div>
+
+        <ion-button @click="logout">Logout</ion-button>
 
 
       </div>
@@ -36,18 +41,36 @@
 </template>
 
 <script lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList } from '@ionic/vue';
-import axios from "axios";
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton } from '@ionic/vue';
+/* import axios from "axios"; */
 import {defineComponent} from "vue";
+/* import {vueKeycloak} from "@baloise/vue-keycloak";*/
 
 export default  defineComponent({
   name: 'Tab1',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList },
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList, IonButton },
 
   data() {
-    return { greeting: null as any };
+    return {
+      greeting: null as any,
+      firstName: '',
+      lastName: '',
+    };
+  },
+ /* computed: {
+    isAuthenticated: () => {
+      return vueKeycloak.authenticated
+    }
   },
   methods: {
+    login () {
+      vueKeycloak.login({ redirectUri: window.location.origin })
+    },
+    logout () {
+      vueKeycloak.logout({ redirectUri: window.location.origin })
+    }
+  } */
+ /* methods: {
     loadGreeting(){
       axios
           .get("http://localhost:8080/greeting")
@@ -55,6 +78,6 @@ export default  defineComponent({
             this.greeting = response.data;
         })
       }
-    }
+    }*/
 })
 </script>

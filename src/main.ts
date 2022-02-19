@@ -44,6 +44,7 @@ const app = createApp(App)
     },
   }
 })
+    /*.config.globalProperties.$keycloak = keycloak;*/
 
 router.isReady().then(() => {
   app.mount('#app');

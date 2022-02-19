@@ -23,8 +23,9 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import {vueKeycloak} from "@baloise/vue-keycloak";
+import i18n from './i18n'
 
-const app = createApp(App)
+const app = createApp(App).use(i18n)
   .use(IonicVue)
   .use(router)
 
@@ -44,7 +45,7 @@ const app = createApp(App)
     },
   }
 })
-    /*.config.globalProperties.$keycloak = keycloak;*/
+/*.config.globalProperties.$keycloak = keycloak;*/
 
 router.isReady().then(() => {
   app.mount('#app');

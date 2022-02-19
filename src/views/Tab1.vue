@@ -52,7 +52,7 @@ export default  defineComponent({
 
   data() {
     return {
-      greeting: null as any,
+      greeting: null,
       firstName: '',
       lastName: '',
     };

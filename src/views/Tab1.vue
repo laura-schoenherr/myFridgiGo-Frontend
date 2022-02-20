@@ -34,6 +34,9 @@
 
         <ion-button @click="logout">Logout</ion-button>
 
+        <!-- multilingual feature -->
+        <p>{{ t('message')}}</p>
+
 
       </div>
     </ion-content>
@@ -42,13 +45,22 @@
 
 <script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton } from '@ionic/vue';
-/* import axios from "axios"; */
+import axios from "axios";
 import {defineComponent} from "vue";
-/* import {vueKeycloak} from "@baloise/vue-keycloak";*/
+
 
 export default  defineComponent({
   name: 'Tab1',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList, IonButton },
+  components: {
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonPage,
+    IonList,
+    IonButton
+  },
+
 
   data() {
     return {
@@ -57,20 +69,7 @@ export default  defineComponent({
       lastName: '',
     };
   },
- /* computed: {
-    isAuthenticated: () => {
-      return vueKeycloak.authenticated
-    }
-  },
   methods: {
-    login () {
-      vueKeycloak.login({ redirectUri: window.location.origin })
-    },
-    logout () {
-      vueKeycloak.logout({ redirectUri: window.location.origin })
-    }
-  } */
- /* methods: {
     loadGreeting(){
       axios
           .get("http://localhost:8080/greeting")
@@ -78,6 +77,6 @@ export default  defineComponent({
             this.greeting = response.data;
         })
       }
-    }*/
+    }
 })
 </script>

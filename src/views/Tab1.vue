@@ -42,7 +42,7 @@
 
 <script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton } from '@ionic/vue';
-/* import axios from "axios"; */
+import axios from "axios";
 import {defineComponent} from "vue";
 /* import {vueKeycloak} from "@baloise/vue-keycloak";*/
 
@@ -55,6 +55,7 @@ export default  defineComponent({
       greeting: null,
       firstName: '',
       lastName: '',
+      userInfo: '',
     };
   },
  /* computed: {
@@ -70,14 +71,18 @@ export default  defineComponent({
       vueKeycloak.logout({ redirectUri: window.location.origin })
     }
   } */
- /* methods: {
-    loadGreeting(){
+  methods: {
+    /* loadGreeting(){
       axios
           .get("http://localhost:8080/greeting")
           .then((response) => {
             this.greeting = response.data;
         })
-      }
-    }*/
+      } */
+    getUserInfo() {
+      axios
+      .get("http://localhost:8080/FridigGo/")
+    }
+    }
 })
 </script>

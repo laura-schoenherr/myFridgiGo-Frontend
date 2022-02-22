@@ -13,7 +13,7 @@
       </ion-header>
 
       <!-- multilingual feature -->
-      <p>{{ $t('message')}}</p>
+      <p>{{ t('message')}}</p>
 
     </ion-content>
   </ion-page>

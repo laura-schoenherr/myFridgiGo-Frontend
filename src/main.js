@@ -23,13 +23,12 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import {vueKeycloak} from "@baloise/vue-keycloak";
-import i18n from './i18n'
+import VueGoogleMaps from '@fawmi/vue-google-maps'
 
-const app = createApp(App).use(i18n)
+const app = createApp(App)
   .use(IonicVue)
   .use(router)
-
-    /* nach Bedarf */
+    /* Secure Login with Keycloak */
     .use(vueKeycloak, '/keycloak.json')
 
 .use(vueKeycloak, async () => {
@@ -45,6 +44,14 @@ const app = createApp(App).use(i18n)
     },
   }
 })
+
+
+    /* Geolocation Service Google Maps*/
+    .use(VueGoogleMaps, {
+      load: {
+        key: 'YOUR_API_KEY_COMES_HERE',
+      },
+    })
 /*.config.globalProperties.$keycloak = keycloak;*/
 
 router.isReady().then(() => {

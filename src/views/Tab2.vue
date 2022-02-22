@@ -34,7 +34,7 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonLabel, IonItemSliding,
   IonItem, IonItemOptions, IonItemOption } from '@ionic/vue';
 

@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-router-outlet></ion-router-outlet>
+   <!-- <ion-router-outlet></ion-router-outlet> -->
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
@@ -85,7 +85,7 @@
   </ion-page>
 </template>
 
-<script lang="ts">
+<script>
   import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput,
   IonItem, IonLabel, IonList, IonButton, IonGrid, IonCol, IonRow, } from '@ionic/vue';
   import { defineComponent } from "vue";

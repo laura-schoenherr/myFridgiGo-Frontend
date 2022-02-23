@@ -23,7 +23,7 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import {vueKeycloak} from "@baloise/vue-keycloak";
-import VueGoogleMaps from '@fawmi/vue-google-maps'
+/* import VueGoogleMaps from '@fawmi/vue-google-maps' */
 
 const app = createApp(App)
   .use(IonicVue)
@@ -46,12 +46,12 @@ const app = createApp(App)
 })
 
 
-    /* Geolocation Service Google Maps*/
+    /* Geolocation Service Google Maps
     .use(VueGoogleMaps, {
       load: {
-        key: 'YOUR_API_KEY_COMES_HERE',
+        key: 'AIzaSyBNQj0mBroJfbmdM9cck0Bnber9385w-Uk',
       },
-    })
+    }) */
 /*.config.globalProperties.$keycloak = keycloak;*/
 
 router.isReady().then(() => {

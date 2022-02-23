@@ -2,13 +2,13 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>User Greeting</ion-title>
+        <ion-title>Kontoinformationen</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">User Greeting</ion-title>
+          <ion-title size="large">Kontoinformationen</ion-title>
         </ion-toolbar>
 
       </ion-header>
@@ -28,11 +28,23 @@
             <ion-label>{{item}} </ion-label>
           </ion-item>
         </ion-list>
-        <p>Hier kannst du dich ein- und ausloggen oder ein Konto einrichten</p>
-        <div v-if="!isAuthenticated"> <ion-button @click="login">Login or Sign up</ion-button> </div>
+
+        <div
+          id="username"
+          v-bind:class="{'top-margin': !userName, activityShowing: userName }"
+          >
+
+        <p>Du bist eingeloggt als</p>
+        <ion-button v-show="!userName" @click="getUserName" expand="block">Username</ion-button>
+        </div>
+        <div v-if="!isAuthenticated">
+          <ion-button @click="login">Login or Sign up
+        </ion-button> </div>
         <div v-else><ion-button @click="logout">Logout</ion-button></div>
 
         <ion-button @click="logout">Logout</ion-button>
+
+
 
 
       </div>
@@ -41,21 +53,21 @@
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton, IonLabel, IonItem } from '@ionic/vue';
 import axios from "axios";
 import {defineComponent} from "vue";
 /* import {vueKeycloak} from "@baloise/vue-keycloak";*/
 
 export default  defineComponent({
   name: 'Tab1',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList, IonButton },
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList, IonButton, IonLabel, IonItem },
 
   data() {
     return {
       greeting: null,
       firstName: '',
       lastName: '',
-      userInfo: '',
+      userName: null,
     };
   },
  /* computed: {
@@ -79,10 +91,14 @@ export default  defineComponent({
             this.greeting = response.data;
         })
       } */
-    getUserInfo() {
-      axios
-      .get("http://localhost:8080/FridigGo/")
-    }
+    getUserName() {
+        axios
+            .get("http://localhost:8080/FridigGo/users/profile")
+            .then((response) => {
+              this.userName = response.data;
+              console.log(this.userName);
+            })
+      }
     }
 })
 </script>

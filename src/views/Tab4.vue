@@ -12,23 +12,71 @@
         </ion-toolbar>
       </ion-header>
 
+      <ion-card>
+
+      <ion-card-header>
+        <ion-card-title>Thats a fucking map</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <maps
+            :disableUI="false"
+            :zoom="12"
+            mapType="roadmap"
+            :center="{ lat: 52.41163319339472, lng: 12.539792573722497 }"
+            :markers="markers">
+        </maps>
+      </ion-card-content>
+
+      </ion-card>
+
 
     </ion-content>
   </ion-page>
 </template>
 
 <script>
-import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from "@ionic/vue";
+import {IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+} from "@ionic/vue";
+import { defineComponent } from "vue";
+import Maps from "@/views/Maps";
 
-export default {
+export default defineComponent({
   name: "Tab4",
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
-}
+  components: {
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonPage,
+    IonCard,
+    IonCardHeader,
+    IonCardTitle,
+    IonCardContent,
+    Maps
+  },
+
+  setup() {
+    const markers = [{
+      lat: 52.41163319339472,
+      lng: 12.539792573722497,
+      title: "Unser Büro"
+    }]
+    return {markers};
+  }
+})
 // Note: This example requires that you consent to location sharing when
 // prompted by your browser. If you see the error "The Geolocation service
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
-let map, infoWindow;
+/* let map, infoWindow;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
@@ -77,4 +125,8 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   );
   infoWindow.open(map);
 }
+*/
+
 </script>
+
+

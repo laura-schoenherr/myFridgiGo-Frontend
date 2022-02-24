@@ -1,61 +1,78 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>User Greeting</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">User Greeting</ion-title>
+      <ion-header>
+        <ion-toolbar class="ion-padding-top ion-padding-end">
+          <ion-title size="large">{{ $t('einkaufsliste') }}</ion-title>
+<ion-item slot="end">
+            <ion-button>
+              <LocalesSwitcher/>
+            </ion-button>
+</ion-item>
         </ion-toolbar>
-
       </ion-header>
 
-      <div
+    <ion-content>
+
+      <!-- <div
           id="container"
           v-bind:class="{'top-margin': !greeting, activityShowing: greeting }"
       >
         <ion-button v-show="!greeting" @click="loadGreeting" expand="block"
                     color="danger">View all Greetings</ion-button>
 
-        <strong v-show="greeting"> All Greetings</strong>
+        <strong v-show="greeting"> All Greetings</strong> -->
 
-        <ion-list>
-          <!-- Loops through the greetings -->
+      <!-- Loops through the greetings -->
+        <!-- <ion-list>
+
           <ion-item v-for="item in greeting" v-bind:key="item.id">
             <ion-label>{{item}} </ion-label>
           </ion-item>
-        </ion-list>
-        <p>Hier kannst du dich ein- und ausloggen oder ein Konto einrichten</p>
-        <div v-if="!isAuthenticated"> <ion-button @click="login">Login or Sign up</ion-button> </div>
+        </ion-list> -->
+
+        <div
+          id="username"
+          v-bind:class="{'top-margin': !userName, activityShowing: userName }"
+          >
+
+        <p>{{ $t('tab1.eingeloggt')}}</p>
+        <ion-button v-show="!userName" @click="getUserName" expand="block">Username</ion-button>
+        </div>
+        <div v-if="!isAuthenticated">
+          <ion-button @click="login">Login or Sign up
+        </ion-button> </div>
         <div v-else><ion-button @click="logout">Logout</ion-button></div>
 
         <ion-button @click="logout">Logout</ion-button>
 
 
-      </div>
+
+
+
+
+      <!-- </div> -->
     </ion-content>
   </ion-page>
 </template>
 
 <script>
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonButton } from '@ionic/vue';
+import { IonItem, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, } from '@ionic/vue';
 import axios from "axios";
 import {defineComponent} from "vue";
+import LocalesSwitcher from "@/components/LocalesSwitcher";
 /* import {vueKeycloak} from "@baloise/vue-keycloak";*/
 
 export default  defineComponent({
   name: 'Tab1',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonList, IonButton },
+  components: { LocalesSwitcher, IonItem, IonHeader, IonToolbar, IonTitle, IonContent, IonPage, IonButton,   },
+
 
   data() {
     return {
       greeting: null,
       firstName: '',
       lastName: '',
-      userInfo: '',
+      userName: null,
     };
   },
  /* computed: {
@@ -79,10 +96,14 @@ export default  defineComponent({
             this.greeting = response.data;
         })
       } */
-    getUserInfo() {
-      axios
-      .get("http://localhost:8080/FridigGo/")
-    }
+    getUserName() {
+        axios
+            .get("http://localhost:8080/FridigGo/users/profile")
+            .then((response) => {
+              this.userName = response.data;
+              console.log(this.userName);
+            })
+      }
     }
 })
 </script>

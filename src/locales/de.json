@@ -1,0 +1,30 @@
+{
+  "message": "hi i18n !!",
+  "einkaufsliste": "Einkaufsliste",
+  "nav": {
+    "einkaufsliste": "Einkaufsliste"
+  },
+  "tab1": {
+    "eingeloggt": "Du bist eingeloggt als"
+
+  },
+  "tab4": {
+    "Büro": "Unser Büro",
+    "title": "Konto",
+    "Sprachauswahl": "Sprachauswahl",
+    "Sprache": "Sprache",
+    "Auswählen": "Auswählen",
+    "Deutsch": "Deutsch",
+    "Englisch": "Englisch"
+  },
+  "tabs": {
+    "Einkaufsliste": "EInkaufsliste",
+    "Plan": "Plan",
+    "Rezepte": "Rezepte",
+    "Konto": "Konto"
+  },
+  "tab3": {
+    "title": "Rezepte",
+    "Filtern": "Filtern"
+  }
+}

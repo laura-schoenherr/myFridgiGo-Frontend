@@ -30,6 +30,7 @@
         </ion-item-sliding>
       </ion-list>
 
+      <p>{{ $t('message') }}</p>
     </ion-content>
   </ion-page>
 </template>

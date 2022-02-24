@@ -1,16 +1,21 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
-        <ion-title size="large" class="ion-text-center">Rezepte</ion-title>
+      <ion-toolbar class="ion-padding-top ion-padding-end">
+        <ion-title size="large">{{ $t('tab3.title')}}</ion-title>
+        <ion-item slot="end">
+          <ion-button>
+            <LocalesSwitcher/>
+          </ion-button>
+        </ion-item>
       </ion-toolbar>
-      </ion-header>
+    </ion-header>
     <ion-content>
 
 
       <!--Filter button-->
       <ion-button fill="outline" color="medium" expand="block">
-        <ion-label>Filtern</ion-label>
+        <ion-label>{{ $t('tab3.Filtern')}}</ion-label>
       </ion-button>
 
       <!--"Add" button for recipe form-->
@@ -162,10 +167,11 @@ import { IonPage, IonHeader, IonToolbar, IonTitle, IonFabButton, IonContent,
   IonButton, IonGrid, IonCol, IonRow, IonLabel} from '@ionic/vue';
 import { defineComponent } from "vue";
 import { add } from "ionicons/icons";
+import LocalesSwitcher from "@/components/LocalesSwitcher";
 
 export default defineComponent({
   name: 'Tab3',
-  components: { IonHeader, IonToolbar, IonTitle, IonPage, IonFabButton, IonContent, IonIcon, IonFab,
+  components: { LocalesSwitcher, IonHeader, IonToolbar, IonTitle, IonPage, IonFabButton, IonContent, IonIcon, IonFab,
   IonCard, IonCardHeader, IonCardContent, IonCardTitle, IonCardSubtitle, IonButton, IonGrid, IonCol, IonRow, IonLabel, },
   setup() {
     return {
@@ -176,7 +182,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.ion-text-center {
-  text-align: center;
-}
 </style>

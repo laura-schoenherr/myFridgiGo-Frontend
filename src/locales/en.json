@@ -1,0 +1,30 @@
+{
+  "message": "hello i18n !!",
+  "einkaufsliste": "Shopping list",
+  "nav": {
+    "einkaufsliste": "Shopping list"
+  },
+  "tab1": {
+    "eingeloggt": "You are logged in as"
+  },
+  "tab4": {
+    "Büro": "Our office",
+    "title": "Account",
+    "Sprachauswahl": "Language selection",
+    "Sprache": "Language",
+    "Auswählen": "Select",
+    "Deutsch": "German",
+    "Englisch": "English"
+  },
+  "tabs": {
+    "Einkaufsliste": "Shoppinglist",
+    "Plan": "Plan",
+    "Rezepte": "Recipes",
+    "Konto": "Account"
+  },
+  "tab3": {
+    "title": "Recipes",
+    "Filtern": "filter"
+  }
+
+}

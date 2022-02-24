@@ -1,21 +1,19 @@
 <template>
   <ion-page>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Tab 4</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 4</ion-title>
+      <ion-header>
+        <ion-toolbar class="ion-padding-top ion-padding-end">
+          <ion-title size="large">{{ $t('tab4.title')}}</ion-title>
+          <ion-item slot="end">
+            <ion-button>
+            <LocalesSwitcher/>
+            </ion-button>
+          </ion-item>
         </ion-toolbar>
       </ion-header>
-
+<ion-content>
       <ion-card>
-
       <ion-card-header>
-        <ion-card-title>Thats a fucking map</ion-card-title>
+        <ion-card-title>{{ $t('tab4.Büro')}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <maps
@@ -29,13 +27,12 @@
 
       </ion-card>
 
-
-    </ion-content>
+</ion-content>
   </ion-page>
 </template>
 
 <script>
-import {IonContent,
+import {
   IonHeader,
   IonPage,
   IonTitle,
@@ -44,23 +41,27 @@ import {IonContent,
     IonCardHeader,
     IonCardTitle,
     IonCardContent,
+    IonItem,
 } from "@ionic/vue";
 import { defineComponent } from "vue";
 import Maps from "@/views/Maps";
+import LocalesSwitcher from "@/components/LocalesSwitcher";
 
 export default defineComponent({
   name: "Tab4",
   components: {
+    LocalesSwitcher,
     IonHeader,
     IonToolbar,
     IonTitle,
-    IonContent,
     IonPage,
     IonCard,
     IonCardHeader,
     IonCardTitle,
     IonCardContent,
-    Maps
+    Maps,
+    IonItem,
+
   },
 
   setup() {
@@ -72,60 +73,7 @@ export default defineComponent({
     return {markers};
   }
 })
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
-/* let map, infoWindow;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 6,
-  });
-  infoWindow = new google.maps.InfoWindow();
-
-  const locationButton = document.createElement("button");
-
-  locationButton.textContent = "Pan to Current Location";
-  locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent("Location found.");
-            infoWindow.open(map);
-            map.setCenter(pos);
-          },
-          () => {
-            handleLocationError(true, infoWindow, map.getCenter());
-          }
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-}
-
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-      browserHasGeolocation
-          ? "Error: The Geolocation service failed."
-          : "Error: Your browser doesn't support geolocation."
-  );
-  infoWindow.open(map);
-}
-*/
 
 </script>
 

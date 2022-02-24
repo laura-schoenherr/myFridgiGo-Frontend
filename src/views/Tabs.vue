@@ -5,22 +5,22 @@
       <ion-tab-bar slot="bottom" >
         <ion-tab-button tab="tab1" href="/tabs/tab1">
           <ion-icon :icon="homeOutline"></ion-icon>
-          <ion-label>Einkaufsliste</ion-label>
+          <ion-label>{{ $t('tabs.Einkaufsliste')}}</ion-label>
         </ion-tab-button>
           
         <ion-tab-button tab="tab2" href="/tabs/tab2">
           <ion-icon :icon="todayOutline"></ion-icon>
-          <ion-label>Plan</ion-label>
+          <ion-label>{{ $t('tabs.Plan')}}</ion-label>
         </ion-tab-button>
         
         <ion-tab-button tab="tab3" href="/tabs/tab3">
           <ion-icon :icon="fileTrayFullOutline"></ion-icon>
-          <ion-label>Rezepte</ion-label>
+          <ion-label>{{ $t('tabs.Rezepte')}}</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="tab4" href="/tabs/tab4">
           <ion-icon :icon="personCircleOutline"></ion-icon>
-          <ion-label>Konto</ion-label>
+          <ion-label>{{ $t('tabs.Konto')}}</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

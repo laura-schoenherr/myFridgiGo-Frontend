@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import Tabs from '../views/Tabs.vue';
+// import i18n from 'i18n'
 
 const routes = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
+    redirect: '/tabs/tab1' // to /${i18n.locale}
   },
   {
-    path: '/tabs',
+    path: '/tabs', //maybe remove slashes
     component: Tabs,
     children: [
       {
